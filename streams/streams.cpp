@@ -1,12 +1,13 @@
 #include <iostream>
 #include <fstream>
+#include <string> // Include <string> for using std::string
 
 int main() {
     
-    std::ofstream arquivo_saida("example.txt");
+    std::ofstream file_out("example.txt"); // Corrected variable name
 
     if (!file_out.is_open()) {
-        std::cerr << "Err to open!" << std::endl;
+        std::cerr << "Error opening file for writing!" << std::endl; // Corrected error message
         return 1;
     }
 
@@ -18,7 +19,7 @@ int main() {
     std::ifstream file_in("example.txt");
 
     if (!file_in.is_open()) {
-        std::cerr << "Err to open file!" << std::endl;
+        std::cerr << "Error opening file for reading!" << std::endl; // Corrected error message
         return 1;
     }
 
